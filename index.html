@@ -96,7 +96,7 @@
         if (timePattern.test(value)) {
           input.setCustomValidity('');
         } else {
-          input.setCustomValidity('請輸入有效的24小時制時間（HH:mm）');
+          input.setCustomValidity('Please enter a valid 24-hour time（HH:mm）');
         }
         
         input.value = value;
@@ -125,7 +125,7 @@
     function formatHourMinute(hour) {
       const h = Math.floor(hour);
       const m = Math.round((hour - h) * 60);
-      return `${h}小時${m > 0 ? m + '分鐘' : ''}`;
+      return `${h}H${m > 0 ? m + 'M' : ''}`;
     }
     function calculate() {
       const capacity = Number(document.getElementById('capacity').value);
